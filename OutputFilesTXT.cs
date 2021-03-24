@@ -36,7 +36,7 @@ namespace OutputFilesTXT
 
         public string PluginName { get; } = "Save .txt Files to Folder";
         public string PluginType { get; } = "Save Output File(s)";
-        public string PluginVersion { get; } = "1.0.5";
+        public string PluginVersion { get; } = "1.0.6";
         public string PluginAuthor { get; } = "Ryan L. Boyd (ryan@ryanboyd.io)";
         public string PluginDescription { get; } = "This plugin will save your output to .txt files contained within a folder. Requires input from parent plugin to be a string.";
         public bool TopLevel { get; } = false;
@@ -150,6 +150,9 @@ namespace OutputFilesTXT
                     OutputFilename = Path.GetFileNameWithoutExtension(OutputFilename);
                     OutputFilename += ";" + (Incoming.SegmentNumber[counter]).ToString();
                     OutputFilename += Path.GetExtension(Incoming.FileID);
+                    OutputFilename += ".txt";
+
+
                 }
 
 
